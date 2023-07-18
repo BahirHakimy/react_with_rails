@@ -1,15 +1,22 @@
 // Entry point for the build script in your package.json
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Greetings from './src/components/Greetings';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
 
-function App(params) {
-  const [counter, setCounter] = React.useState(0);
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: '',
+      element: <Greetings />,
+    },
+  ]);
   return (
-    <h1>
-      Hello netlinks!
-      {counter}
-      <button onClick={() => setCounter(counter + 1)}>Increment</button>
-    </h1>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 

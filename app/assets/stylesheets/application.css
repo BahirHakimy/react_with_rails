@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.tv-container {
+  width: 400px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.tv-container h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
